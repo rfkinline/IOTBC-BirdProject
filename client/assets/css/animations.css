@@ -1,0 +1,57 @@
+.movingEyes{
+    animation: moveEyes 2s linear infinite;
+}
+
+.rightWing{
+    animation: rotate-right 2s linear infinite;
+    animation-fill-mode: forwards;
+    background-color: blue;
+}
+
+.leftWing{
+    animation: rotate-left 2s linear infinite;
+}
+
+@keyframes moveEyes {
+   0% {
+         transform: translate(0px,0px); 
+    }
+    25% {
+         transform: translate(-4px,4px); 
+    }
+   50% {
+         transform: translate(-7px,7px); 
+    }
+   75% {
+         transform: translate(-4px,4px); 
+    }
+    100% {
+         transform: translate(0px,0px); 
+    }  
+}
+
+@keyframes rotate-right {
+    to {background-color: blue;}
+    0% {
+         transform: rotate(0deg);
+    }
+    50% {
+         transform: rotate(45deg);
+    }
+    100% {
+         transform: rotate(0deg);
+    }    
+}
+
+@keyframes rotate-left {
+    to {background-color: red;}
+    0% {
+         transform: rotate(0deg);
+    }
+    50% {
+         transform: rotate(-45deg);
+    }
+    100% {
+         transform: rotate(0deg);
+    }    
+}

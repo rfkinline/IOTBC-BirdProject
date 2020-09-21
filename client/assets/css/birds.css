@@ -1,0 +1,165 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+html {
+    box-sizing: border-box;
+    overflow-y: scroll;
+}
+
+body {
+    background: #ffeec8;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .bird {
+    background: #fdbd2c;
+    height: 350px;
+    width: 200px;
+    border-radius: 100px;
+    position: relative;
+  }
+
+  .smallSun {
+    background: transparent url(../images/sun.jpg) no-repeat center center;
+    height: 75px;
+    width: 75px;
+    top: 30px;
+    right: -197px;
+    border-radius: 50%;
+    position: relative;
+  }
+  .bigSun {
+    height: 125px;
+    width: 125px;
+    top: 30px;
+    right: -164px;
+    border-radius: 50%;
+    position: relative;
+  }
+  .hair-left {
+    content: '';
+    position: absolute;
+    top: 0px;
+    right: 95px;
+    background: #fdbd2c;
+    width: 80px;
+    height: 20px;
+    transform: rotate(165deg);
+    border-bottom-right-radius: 30px;
+  }
+  .hair-middle {
+    position: absolute;
+    top: 1px;
+    right: 73px;
+    background: #fdbd2c;
+    width: 41px;
+    height: 34px;
+    transform: rotate(120deg);
+    border-bottom-right-radius: 30px;
+  }
+  .hair-right {
+    content: '';
+    position: absolute;
+    top: 1px;
+    right: 22px;
+    background: #fdbd2c;
+    width: 80px;
+    height: 20px;
+    transform: rotate(15deg);
+    border-top-right-radius: 30px;
+  }
+  .bird .eyes .right-eye {
+    background: #000;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    top: 90px;
+    left: 50px;
+  }
+  .bird .eyes .left-eye {
+    background: #000;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    top: 90px;
+    right: 50px;
+  }
+  .bird .eyes .inner-eye {
+    position: absolute;
+    top: 6px;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    background: #FFF;
+    border-radius: 50%;
+  }
+  .bird .mouth {
+    position: absolute;
+    top: 140px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 30px 30px 0 30px;
+    border-color: #e7831e transparent transparent transparent;
+  }
+  .bird .hands .right-wing {
+    background: #f2b02a;
+    width: 50px;
+    height: 80px;
+    position: absolute;
+    top: 140px;
+    left: -30px;
+    transform: rotate(10deg);
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+  .bird .hands .left-wing {
+    background: #f2b02a;
+    width: 50px;
+    height: 80px;
+    position: absolute;
+    top: 140px;
+    right: -30px;
+    transform: rotate(-10deg);
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+  .bird .belly {
+    background: #f4c778;
+    width: 120px;
+    height: 170px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    border-radius: 70px;
+  }
+  .bird .feet .right-foot {
+    position: absolute;
+    bottom: -23px;
+    right: 50%;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 30px solid;
+    border-bottom-color: black;
+  }
+  .bird .feet .left-foot {
+    position: absolute;
+    bottom: -23px;
+    right: 15%;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 30px solid;
+    border-bottom-color: black;
+  }
