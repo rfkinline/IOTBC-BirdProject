@@ -24,3 +24,11 @@ To interact with the contract: in CMD type truffle console<br>
 Examples:<br>
 <li>var instance = await Birdcontract.deployed()
 <li>instance.name()
+<li>instance.createBirdGen0(1001)
+<li>instance.totalSupply()
+<li>instance.balanceOf(accounts[0])
+<li>accounts
+<li>instance.ownerOf(0)
+<li>instance.getBird(0)
+<li>result["genes"] or  // only after "result" is defined as the return of a function
+<li>result["birthTime"].toNumber(0) // otherwise number will be displayed in hex
