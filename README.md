@@ -18,5 +18,9 @@ in CMD type "truffle migrate"<br>
 in CMD "truffle console"<br>
 <br>
 before new deployment: migrate <br>
-before next deployment: migrate --reset
-
+before next deployment: migrate --reset<br>
+<br>
+To interact with the contract:in CMD type truffle console<br>
+Examples:<br>
+<li>var instance = await Birdcontract.deployed()
+<li>instance.name()

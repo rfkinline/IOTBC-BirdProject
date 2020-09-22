@@ -44,7 +44,6 @@ contract Birdcontract is IERC721{
         birdIndexToOwner[_tokenId] = _to;
         if (_from != address(0)) {
             ownershipTokenCount[_from]--;
-            delete birdIndexToApproved[_tokenId];
         }
         emit Transfer(_from, _to, _tokenId);
     }
