@@ -1,4 +1,4 @@
-# Truffle CHeat Sheet
+# Truffle Cheat Sheet
 Bootcamp 2020 / Categories / Day 4 / Deploying our First Contract
 <br>
 <li>create folder
@@ -8,14 +8,14 @@ Bootcamp 2020 / Categories / Day 4 / Deploying our First Contract
 <li>go back to CMD and use "truffle compile"
 <li>the result is displaied under the folder build/contracts
 <br>
-<<li>>now create migration files under the folder migrations
-Reihenfolge: Start with 1_ then 2_...use names under build
+<li>>now create migration files under the folder migrations<br>
+Reihenfolge: Start with 1_ then 2_...use names under build<br>
 <br>
-Open Ganache and link the contracts (under CONTRACTS)
+Open Ganache and link the contracts (under CONTRACTS)<br>
 <br>
-in CMD type "truffle migrate"
+in CMD type "truffle migrate"<br>
 <br>
-in CMD "truffle console"
+in CMD "truffle console"<br>
 <br>
 before new deployment: migrate <br>
 before next deployment: migrate --reset
