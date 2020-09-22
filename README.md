@@ -6,21 +6,22 @@ Bootcamp 2020 / Categories / Day 4 / Deploying our First Contract
 <li>go to editor
 <li>create contract under the CONTRACTS folder
 <li>go back to CMD and use "truffle compile"
-<li>the result is displaied under the folder build/contracts
+<li>the result is displayed under the folder build/contracts
 <br>
-<li>>now create migration files under the folder migrations<br>
+<li>now create the migration files under the folder migrations<br>
 Reihenfolge: Start with 1_ then 2_...use names under build<br>
 <br>
-Open Ganache and link the contracts (under CONTRACTS)<br>
+Open Ganache and link the contracts (Settings, Add Project). If done correctly they will appear under CONTRACTS<br>
 <br>
-in CMD type "truffle migrate"<br>
+# To deploy:<br>
+<br>in CMD type "truffle migrate"<br>
 <br>
-in CMD "truffle console"<br>
+in CMD type "truffle console"<br>
 <br>
 before new deployment: migrate <br>
 before next deployment: migrate --reset<br>
 <br>
-To interact with the contract:in CMD type truffle console<br>
+To interact with the contract: in CMD type truffle console<br>
 Examples:<br>
 <li>var instance = await Birdcontract.deployed()
 <li>instance.name()
