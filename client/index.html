@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
   <script src="assets/bootstrap/js/popper.js"></script>
   <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/js/web3.min.js"></script>
+  <script src="./abi.js"></script>
 
   <link rel="stylesheet" href="assets/css/mystyle.css">
   <link rel="stylesheet" href="assets/css/birds.css">
@@ -124,6 +126,8 @@
               <button class="btn btn-primary tsp-1 m-1 light-b-shadow" onclick="randomBird()">Random Bird</button>
               <button class="btn btn-primary tsp-1 m-1 light-b-shadow" onclick="defaultBird()">Default</button>
               <button class="btn btn-primary tsp-1 m-1 light-b-shadow" onclick="createBird()">Create</button>
+              <br>
+              <div class="alert alert-success" role="alert" id="birdCreation" style="display:none"></div>
           </div>
           <br>
 
@@ -136,6 +140,8 @@
       <p>Ivan on Tech Academy Bootcamp July 2020</p>
   </footer>
   </body>
+  <!-- at the bottom becuase they listen to actions happening above -->
+  <script src="./index.js"></script>
   <script src="assets/js/colors.js"></script>
   <script src="assets/js/birdSettings.js"></script>
   <script src="assets/js/birdFactory.js"></script>
