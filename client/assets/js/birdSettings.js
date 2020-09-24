@@ -2,16 +2,16 @@
 var colors = Object.values(allColors())
 
 var defaultDNA = {
-    "bodyColor" : 12,
+    "bodyColor" : 51,
     "bellyColor" : 55,
     "eyesColor" : 96,
-    "feetColor" : 50,
+    "feetColor" : 74,
     "eyesShape" : 1,
     "hairShape" : 1,
     "appearSun" : 2,
     "sunColor" : 18,
-    "animation" :  1,
-    "lastNum" :  1
+    "animation" : 1,
+    "lastNum" : 1
     }
 
 // when page load
