@@ -84,13 +84,6 @@ footer {
 }
 
 
-.egg {
-    width: 150px;
-    height: 150px;
-    background: url('../images/egg.png') no-repeat;
-    background-size: contain;
-}
-
 /* BUTTONS */
 
 .red-btn {

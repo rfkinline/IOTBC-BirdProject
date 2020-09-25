@@ -1,4 +1,3 @@
-
 //Random color
 function getColor() {
     var randomColor = Math.floor(Math.random() * 16777215).toString(16);
@@ -15,7 +14,9 @@ function genColors(){
 }
 
 function bodyColor(color,code) {
+    entry = gradient_table[code].name
     $('.bird').css('background', '#' + color)  //This changes the color of the bird
+    $('#birdname').html(entry)
     $('#bodyCode').html('code: '+ code) //This updates text of the badge next to the slider
     $('#dnabody').html(code) //This updates the body color part of the DNA that is displayed below the bird
 }
@@ -32,10 +33,22 @@ function eyesColor(color,code) {
     $('#dnaeyes').html(code)
 }
 
-function sunColor(color,code) {
-    $('.sun').css('background', '#' + color)  
-    $('#sunColorcode').html('code: '+ code)
-    $('#dnasuncolor').html(code)
+function eggColorfrom(color,code) {
+    var rgba = '#' + color;
+    var rgbaTwo = "rgba(110,131,37,0.5)";
+    $('.egg').css( 'background' , 'linear-gradient(to right,' + rgba + ', ' + rgbaTwo + ')')
+//    $('.egg').css( "background-image", "linear-gradient( to right, #dc8a8a 50%, red 10% )" )
+    $('#eggColorfromcode').html('code: '+ code)
+    $('#dnaeggColorfrom').html(code)
+}
+
+function eggColorto(color,code) {
+    var rgba = "rgba(110,131,37,0.5)";
+    var rgbaTwo = '#' + color;
+    $('.egg').css( 'background' , 'linear-gradient(to right,' + rgba + ', ' + rgbaTwo + ')')
+//    $('.egg').css( "background-image", "linear-gradient( to right, #dc8a8a 50%, red 10% )" )
+    $('#eggColortocode').html('code: '+ code)
+    $('#dnaeggColorto').html(code)
 }
 
 function feetColor(color,code) {
@@ -96,24 +109,6 @@ function animationVariation(num) {
             break
     }
 }
-function sunVariation(num) {
-    $('#dnaappearsun').html(num)
-    switch (num) {
-        case 1:
-            $('#sunName').html('No sun');
-            noSun();
-            break
-        case 2:
-            $('#sunName').html('Small sun');
-            sunType1();
-            break
-        case 3:
-            $('#sunName').html('Big sun');
-            sunType2();
-            break
-    }
-}
-
 
 async function normalEyes() {
     await $('.left-eye, .right-eye').find('span').css('border-radius', '50%')   // take left-eye element and find all of the span within that element
@@ -157,17 +152,4 @@ function noAnimation() {
     $(".inner-eye").removeClass("movingEyes");
     $(".right-wing").removeClass("rightWing");
     $(".left-wing").removeClass("leftWing");
-}
-
-function sunType1() {
-    noSun();
-    $(".sun").addClass("smallSun");
-}
-function sunType2() {
-    noSun();
-    $(".sun").addClass("bigSun");
-}
-function noSun() {
-    $(".sun").removeClass("smallSun");
-    $(".sun").removeClass("bigSun");
 }

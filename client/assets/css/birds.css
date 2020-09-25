@@ -24,23 +24,23 @@ body {
     position: relative;
   }
 
-  .smallSun {
-    background: transparent url(../images/sun.jpg) no-repeat center center;
-    height: 75px;
-    width: 75px;
-    top: 30px;
-    right: -197px;
-    border-radius: 50%;
-    position: relative;
+  .birdname{
+    font-family: Arial, Helvetica, sans-serif;;
+    font-size: 20px;
+    font-weight: bold;
   }
-  .bigSun {
-    height: 125px;
-    width: 125px;
-    top: 30px;
-    right: -164px;
-    border-radius: 50%;
+  .egg{
     position: relative;
+    top: -22x;
+    right: 54px;
+    width: 100px;
+    height: 100px;
+    border-radius: 80% 15% 55% 50% / 55% 15% 80% 50%;
+    transform: rotate(-45deg);
+    background-image: linear-gradient(red, blue);
+    content: " New!";
   }
+
   .hair-left {
     content: '';
     position: absolute;

@@ -1,4 +1,3 @@
-
 var colors = Object.values(allColors())
 
 var defaultDNA = {
@@ -8,8 +7,8 @@ var defaultDNA = {
     "feetColor" : 74,
     "eyesShape" : 1,
     "hairShape" : 1,
-    "appearSun" : 2,
-    "sunColor" : 18,
+    "eggColorto" : 22,
+    "eggColorfrom" : 18,
     "animation" : 1,
     "lastNum" : 1
     }
@@ -22,8 +21,8 @@ $( document ).ready(function() {
   $('#dnafeet').html(defaultDNA.feetColor);
   $('#dnashape').html(defaultDNA.eyesShape)
   $('#dnahairshape').html(defaultDNA.hairShape)
-  $('#dnaappearsun').html(defaultDNA.appearSun)
-  $('#dnasuncolor').html(defaultDNA.sunColor)
+  $('#dnaeggColorto').html(defaultDNA.eggColorto)
+  $('#dnaeggColorfrom').html(defaultDNA.eggColorfrom)
   $('#dnaanimation').html(defaultDNA.animation)
   $('#dnaspecial').html(defaultDNA.lastNum)
   renderBird(defaultDNA)
@@ -35,7 +34,6 @@ function defaultBird(){
 
 function randomDNA(){
   var dnaStr = String(Math.floor(Math.random()*1E16))
-  console.log(dnaStr.substring(11, 13))
   var dna = {
     "bodyColor" : dnaStr.substring(0, 2),
     "bellyColor" : dnaStr.substring(2, 4),
@@ -43,10 +41,10 @@ function randomDNA(){
     "feetColor" : dnaStr.substring(6, 8),
     "eyesShape" : dnaStr.substring(8, 9) % 2 + 1,
     "hairShape" : dnaStr.substring(9, 10) % 2 + 1,
-    "appearSun" : dnaStr.substring(10, 11) % 3 + 1,
-    "sunColor" : dnaStr.substring(11, 13),
-    "animation" : dnaStr.substring(13, 14),
-    "lastNum" : dnaStr.substring(14, 15),
+    "eggColorto" : dnaStr.substring(10, 12),
+    "eggColorfrom" : dnaStr.substring(12, 14),
+    "animation" : dnaStr.substring(14, 15),
+    "lastNum" : dnaStr.substring(15, 16),
   }
   return dna
 }
@@ -64,8 +62,8 @@ function getDna(){
     dna += $('#dnafeet').html()
     dna += $('#dnashape').html()
     dna += $('#dnahairshape').html()
-    dna += $('#dnaappearsun').html()
-    dna += $('#dnasuncolor').html()
+    dna += $('#dnaeggColorto').html()
+    dna += $('#dnaeggColorfrom').html()
     dna += $('#dnaanimation').html()
     dna += $('#dnaspecial').html()
     return parseInt(dna)
@@ -86,10 +84,10 @@ function renderBird(dna){
   $('#hairShape').val(dna.hairShape)
   animationVariation(dna.animation)
   $('#animation').val(dna.animation)
-  sunVariation(dna.appearSun)
-  $('#appearSun').val(dna.appearSun)
-  sunColor(colors[dna.sunColor],dna.sunColor)
-  $('#sunColor').val(dna.sunColor)
+  eggColorto(colors[dna.eggColorto],dna.eggColorto)
+  $('#eggColorto').val(dna.eggColorto)
+  eggColorfrom(colors[dna.eggColorfrom],dna.eggColorfrom)
+  $('#eggColorfrom').val(dna.eggColorfrom)
 }
 
 // Changing bird colors
@@ -109,11 +107,6 @@ $('#bellyColor').change(()=>{
 $('#eyesColor').change(()=>{
   var colorVal = $('#eyesColor').val()
   eyesColor(colors[colorVal],colorVal)
-})
-
-$('#sunColor').change(()=>{
-  var colorVal = $('#sunColor').val()
-  sunColor(colors[colorVal],colorVal)
 })
 
 $('#feetColor').change(()=>{
@@ -136,7 +129,12 @@ $('#animation').change(()=>{
   animationVariation(animationVal)
 })
 
-$('#appearSun').change(()=>{
-  var sunVal = parseInt($('#appearSun').val())
-  sunVariation(sunVal)
+$('#eggColorto').change(()=>{
+  var colorVal = $('#eggColorto').val()
+  eggColorto(colors[colorVal],colorVal)
+})
+
+$('#eggColorfrom').change(()=>{
+  var colorVal = $('#eggColorfrom').val()
+  eggColorfrom(colors[colorVal],colorVal)
 })
