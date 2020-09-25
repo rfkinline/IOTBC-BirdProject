@@ -43,7 +43,7 @@ function randomDNA(){
     "hairShape" : dnaStr.substring(9, 10) % 2 + 1,
     "eggColorto" : dnaStr.substring(10, 12),
     "eggColorfrom" : dnaStr.substring(12, 14),
-    "animation" : dnaStr.substring(14, 15),
+    "animation" : dnaStr.substring(14, 15) % 4 + 1,
     "lastNum" : dnaStr.substring(15, 16),
   }
   return dna
